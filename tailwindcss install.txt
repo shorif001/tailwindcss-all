@@ -57,3 +57,9 @@ module.exports = {
 then open project terminal and run this command:
 
 => npm run build:css
+
+
+
+when clone or download this project in github first install
+=> npm install
+=> npm run build:css
