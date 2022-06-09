@@ -13,10 +13,15 @@
 
     <!-- Dropdown -->
     <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+
+
+    <!-- modal cdn -->
+    <!-- www.tailwind-elements.com/quick-start -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </head>
 
 <body>
-      <!-- header -->
+    <!-- header -->
     <header class="">
         <div class="">
             <div class="container mx-auto p-3 bg-gray-200">
@@ -37,7 +42,7 @@
 
     <!-- body content  -->
     <main class="container mx-auto">
-         <!-- cover image -->
+        <!-- cover image -->
         <div class="w-container sm:h-128 md:h-full lg:h-128">
             <img class="w-full h-full" src="./images/1.jpg" alt="">
         </div>
@@ -230,27 +235,6 @@
             </div>
         </div>
 
-        <!-- dropdown in input field without cdn-->
-        <div class="mt-5">
-            <div class="w-1/3">
-                <label class="inline-block text-sm text-gray-600" for="color">Select Your Gender</label>
-                <div class="relative flex w-full">
-                    <select
-                        class="block w-full py-3 pl-4 pr-8 bg-white border border-gray-300 rounded-sm appearance-none cursor-pointer focus:outline-none hover:border-gray-400">
-                        <option>Select...</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <div class="absolute inset-y-0 right-0 flex items-center px-2 text-blue-400 pointer-events-none">
-                        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- checkbox -->
         <div class="mt-5">
             <div class="flex items-center w-1/3">
@@ -361,7 +345,7 @@
             </div>
         </div>
 
-<!-- group list item -->
+        <!-- group list item -->
         <div class="mt-5">
             <div class="w-1/3 bg-white rounded-lg shadow">
                 <ul class="divide-y-2 divide-gray-100">
@@ -466,7 +450,7 @@
                 </div>
             </div>
 
-            <h3 class="p-4 text-3xl text-center text-bold"> Breadcrumbs Using Divider</h3>
+            <h3 class="p-4 text-3xl text-center text-bold border-b border-blue-600"> Breadcrumbs Using Divider</h3>
 
             <div class="container flex justify-center mx-auto">
                 <div class="w-full p-3 m-4 bg-gray-200 rounded">
@@ -544,6 +528,28 @@
 
         <!-- Dropdown start -->
 
+        <!-- dropdown in input field without cdn-->
+        <div class="mt-5">
+            <div class="w-1/3">
+                <label class="inline-block text-sm text-gray-600" for="color">Select Your Gender</label>
+                <div class="relative flex w-full">
+                    <select
+                        class="block w-full py-3 pl-4 pr-8 bg-white border border-gray-300 rounded-sm appearance-none cursor-pointer focus:outline-none hover:border-gray-400">
+                        <option>Select...</option>
+                        <option class="bg-gray-400" value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-2 text-blue-400 pointer-events-none">
+                        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- dropdown with cdn-->
         <div class="mt-5">
             <div class="relative" x-data="{ open: false }">
                 <!-- Dropdown toggle button -->
@@ -558,21 +564,17 @@
                 </button>
                 <!-- Dropdown List -->
                 <div x-show="open" @click.away="open = false"
-                    class="absolute right-0 py-2 mt-2 bg-white bg-gray-100 divide-y divide-gray-600 rounded-md shadow-xl w-44">
-                    <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                    class="absolute left-auto right-auto py-2 bg-white bg-gray-100 divide-y divide-gray-600 rounded-md shadow-xl w-44">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400 hover:text-white">
                         Dropdown List 1
                     </a>
-                    <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400 hover:text-white">
                         Dropdown List 2
                     </a>
-                    <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400 hover:text-white">
                         Dropdown List 3
                     </a>
-                    <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400 hover:text-white">
                         Dropdown List 4
                     </a>
                 </div>
@@ -582,7 +584,7 @@
         <div class="mt-60">
             <div class="relative" x-data="{ open: false }">
                 <!-- Dropdown toggle button -->
-                <button @click="open = true" class="block p-2 bg-white bg-gray-100 rounded-md ">
+                <button @click="open = true" class="block p-2 bg-gray-100  ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -592,7 +594,7 @@
 
                 <!-- Dropdown List -->
                 <div x-show="open" @click.away="open = false"
-                    class="absolute right-0 w-48 py-2 mt-2 bg-white bg-gray-100 rounded-md shadow-xl">
+                    class="absolute left-auto right-auto w-48 py-2 mt-0 bg-white bg-gray-100  shadow-xl">
                     <a href="#"
                         class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
                         Dropdown List 1
@@ -609,25 +611,22 @@
             </div>
         </div>
 
-        <div class="mt-60">
+        <div class="mt-40">
             <div class="relative" x-data="{ open: false }">
                 <!-- Dropdown toggle button -->
-                <button @click="open = true" class="flex items-center p-2 bg-white bg-gray-100 rounded-md">
+                <button @click="open = true" class="flex items-center p-2  bg-gray-100 rounded-md">
                     <span class="mr-4">Dropdown </span>
                 </button>
                 <!-- Dropdown list -->
                 <div x-show="open" @click.away="open = false"
-                    class="absolute right-0 py-2 mt-2 bg-white bg-gray-100 rounded-md shadow-xl w-44">
-                    <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                    class="absolute left-auto right-auto py-2 mt-1  bg-gray-100 rounded-md shadow-xl w-44">
+                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-400 hover:text-white">
                         Dropdown List 1
                     </a>
-                    <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-400 hover:text-white">
                         Dropdown List 2
                     </a>
-                    <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-400 hover:text-white">
                         Dropdown List 3
                     </a>
                 </div>
@@ -635,66 +634,188 @@
         </div>
 
         <!-- Dropdown -->
-        <div class="mt-60">
+        <div class="mt-40">
             <div x-data="{ open: false }">
                 <button @click="open = true">Click me for dropdown</button>
                 <ul x-show="open" @click.away="open = false">
-                    <li class="my-4"><a href="#">Click me for dropdown</a></li>
-                    <li class="my-4"><a href="#">Click me for dropdown</a></li>
-                    <li class="my-4"><a href="#">Click me for dropdown</a></li>
-                    <li class="my-4"><a href="#">Click me for dropdown</a></li>
+                    <li class="my-4"><a href="#">Dropdown 1</a></li>
+                    <li class="my-4"><a href="#">Dropdown 2</a></li>
+                    <li class="my-4"><a href="#">Dropdown 3</a></li>
+                    <li class="my-4"><a href="#">Dropdown 4</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="mt-60 ml-40">
-            <!-- This example requires Tailwind CSS v2.0+ -->
-            <div class="relative inline-block text-left">
-                <div>
-                    <button type="button"
-                        class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
-                        id="menu-button" aria-expanded="true" aria-haspopup="true">
-                        Options
-                        <!-- Heroicon name: solid/chevron-down -->
-                        <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                            fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                </div>
 
-                <!--
-      Dropdown menu, show/hide based on menu state.
+        <!-- Dropdown end -->
 
-      Entering: "transition ease-out duration-100"
-        From: "transform opacity-0 scale-95"
-        To: "transform opacity-100 scale-100"
-      Leaving: "transition ease-in duration-75"
-        From: "transform opacity-100 scale-100"
-        To: "transform opacity-0 scale-95"
-    -->
-                <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-                    role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                    <div class="py-1" role="none">
-                        <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                            id="menu-item-0">Account settings</a>
-                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                            id="menu-item-1">Support</a>
-                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                            id="menu-item-2">License</a>
-                        <form method="POST" action="#" role="none">
-                            <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
-                                role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-                        </form>
+        <br>
+        <!-- table start -->
+
+        <div class="mt-40">
+            <div class="flex flex-col">
+                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="overflow-hidden">
+                            <table class="min-w-full border text-center">
+                                <thead class="border-b">
+                                    <tr>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 border-r">
+                                            #
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 border-r">
+                                            First
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 border-r">
+                                            Last
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+                                            Handle
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r">
+                                            1</td>
+                                        <td
+                                            class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                            Mark
+                                        </td>
+                                        <td
+                                            class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                            Otto
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            @mdo
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r">
+                                            2</td>
+                                        <td
+                                            class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                            Jacob
+                                        </td>
+                                        <td
+                                            class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                            Thornton
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            @fat
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 border-r">
+                                            3</td>
+                                        <td colspan="2"
+                                            class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center border-r">
+                                            Larry the Bird
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            @twitter
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Dropdown end -->
+        <!-- table end -->
+
+
+        <!-- modal start -->
+        <h1 class="mt-40">Modal</h1>
+        <div>
+            <!-- Button trigger modal -->
+            <button type="button" class="px-6
+py-2.5
+bg-blue-600
+text-white
+font-medium
+text-xs
+leading-tight
+uppercase
+rounded
+shadow-md
+hover:bg-blue-700 hover:shadow-lg
+focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+active:bg-blue-800 active:shadow-lg
+transition
+duration-150
+ease-in-out" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+
+            <div class="modal fade fixed top-0 left-0 hidden w-1/3 h-full outline-none overflow-x-hidden overflow-y-auto justify-center"
+                id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog relative w-auto pointer-events-none">
+                    <div
+                        class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                        <div
+                            class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
+                            <h5 class="text-xl font-medium leading-normal text-gray-800" id="exampleModalLabel">Modal
+                                title</h5>
+                            <button type="button"
+                                class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+                                data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body relative p-4">
+                            Modal body text goes here.
+                        </div>
+                        <div
+                            class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
+                            <button type="button" class="px-6
+                                    py-2.5
+                                    bg-purple-600
+                                    text-white
+                                    font-medium
+                                    text-xs
+                                    leading-tight
+                                    uppercase
+                                    rounded
+                                    shadow-md
+                                    hover:bg-purple-700 hover:shadow-lg
+                                    focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0
+                                    active:bg-purple-800 active:shadow-lg
+                                    transition
+                                    duration-150
+                                    ease-in-out" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="px-6
+                                py-2.5
+                                bg-blue-600
+                                text-white
+                                font-medium
+                                text-xs
+                                leading-tight
+                                uppercase
+                                rounded
+                                shadow-md
+                                hover:bg-blue-700 hover:shadow-lg
+                                focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+                                active:bg-blue-800 active:shadow-lg
+                                transition
+                                duration-150
+                                ease-in-out
+                                ml-1">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </main>
+
+    <div class="mt-60"></div>
     <footer>
 
     </footer>
