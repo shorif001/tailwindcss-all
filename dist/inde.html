@@ -553,7 +553,7 @@
         <div class="mt-5">
             <div class="relative" x-data="{ open: false }">
                 <!-- Dropdown toggle button -->
-                <button @click="open = true" class="flex items-center block p-2 bg-white bg-gray-100 rounded-md w-44">
+                <button @click="open = true" class="flex items-center  p-2 bg-gray-100 rounded-md w-44">
                     <span class="mr-4">Dropdown Menu</span>
                     <svg class="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20" fill="currentColor">
@@ -564,7 +564,7 @@
                 </button>
                 <!-- Dropdown List -->
                 <div x-show="open" @click.away="open = false"
-                    class="absolute left-auto right-auto py-2 bg-white bg-gray-100 divide-y divide-gray-600 rounded-md shadow-xl w-44">
+                    class="absolute left-auto right-auto py-2 bg-gray-100 divide-y divide-gray-600 rounded-md shadow-xl w-44">
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400 hover:text-white">
                         Dropdown List 1
                     </a>
@@ -594,17 +594,17 @@
 
                 <!-- Dropdown List -->
                 <div x-show="open" @click.away="open = false"
-                    class="absolute left-auto right-auto w-48 py-2 mt-0 bg-white bg-gray-100  shadow-xl">
+                    class="absolute left-auto right-auto w-48 py-2 mt-0  bg-gray-100  shadow-xl">
                     <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400 hover:text-white">
                         Dropdown List 1
                     </a>
                     <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400 hover:text-white">
                         Dropdown List 2
                     </a>
                     <a href="#"
-                        class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400 hover:text-white">
                         Dropdown List 3
                     </a>
                 </div>
