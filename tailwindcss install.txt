@@ -1,3 +1,6 @@
+token: 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
+
+
 create package.json file:
 
 => npm init -y
@@ -51,6 +54,6 @@ module.exports = {
 
 
 
-then open project terminal and run this command: 
+then open project terminal and run this command:
 
 => npm run build:css
