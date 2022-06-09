@@ -1,0 +1,52 @@
+create package.json file:
+
+=> npm init -y
+
+install tailwind:
+
+=> npm i tailwindcss
+
+open package.json file and paste this in scripts object:
+
+"scripts": {
+    "build:css": "tailwind build ./src/tailwind.css -o ./dist/style.css -w"
+  },
+
+then create 2 folder:
+1: src
+2: dist
+
+dist---
+ ---index.html
+ ---styles.css
+
+src---
+ ---tailwind.css
+
+open tailwind.css file and past this:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+create tailwind.config.js file:
+
+=> npx tailwind init
+
+
+then open tailwind.config.js file and past it:
+
+// const colors = require('tailwindcss/colors');
+
+module.exports = {
+  content: [
+    './dist/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx,vue}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
